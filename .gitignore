@@ -1,0 +1,21 @@
+# Private credentials and Gmail tokens
+credentials.json
+token*.json
+.env
+.env.*
+
+# Python environments and temporary files
+.venv/
+.venv312/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Local backups
+app_backup.txt
+app_before_url_fix.py
+app_pre_explanation_changes.py
+app_working_backup.py
+app.py.backup
+app.py.before_*
+gmail_reader.py.before_demo_label
