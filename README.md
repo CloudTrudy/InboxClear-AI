@@ -80,37 +80,4 @@ If the safety check identifies a potentially important message, returns an unexp
 
 ### How to reuse this pattern
 
-1. Define a typed choice question with explicit, permitted outcomes.
-2. Provide clear criteria for each choice, including when to select REVIEW.
-3. Send relevant context to the Decider endpoint.
-4. Validate the returned choice and apply an appropriate confidence policy.
-5. Add safety checks before allowing decisions to trigger consequential actions.
-6. Fail safely when a decision is invalid, uncertain, or a safety check cannot complete.
-
-This pattern can be adapted for support-ticket routing, document classification, or task prioritisation by changing the question, options, criteria, and safety checks to suit the new use case.
-
-**Hackathon pattern declaration:** Policy and guardrails.
-
-**Tags:** `#strands-decider-2b` `#policy` `#guardrails`
-
-## Running locally
-
-InboxClear AI requires Python, Gmail API access, AWS credentials, and permission to invoke the configured Amazon Bedrock model. The Streamlit application communicates with a separately running Strands Decider System One service at `http://127.0.0.1:8099/v1/systemone`.
-
-The application is configured to run locally on port `8505`. The Decider service must be available on port `8099` for email classification to work. Follow the final repository setup instructions to install dependencies and start both services.
-
-Gmail access requires an authorised OAuth setup. Amazon Bedrock access requires valid AWS credentials and model permissions in the configured AWS region.
-
-**Security note:** Never commit Gmail credentials, access tokens, AWS secrets, or other private configuration files to the repository.
-
-## Limitations
-
-InboxClear AI is a hackathon demonstration, not a guarantee of correct email classification or a replacement for human judgement. AI decisions can be wrong, and confidence scores do not guarantee correctness.
-
-The `InboxClear AI Demo` Gmail label limits which messages the application selects for processing, but it is not a complete security boundary. Review decisions carefully before applying them, and do not rely on this demonstration as the sole safeguard for important email.
-
-## Author
-
-**Trudy-Ann Foster**
-
-Built for the **Agent Experience Hackathon: Strands Decider**, October 2026.
+1. Define a typed choice question
